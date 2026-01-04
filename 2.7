@@ -1,0 +1,41 @@
+# Broc Salvati
+# January 4, 2026
+# This program implements a number guessing game with user interaction,
+# conditional logic, and demonstrates both while and for loops with incrementing values.
+
+# Get user information
+userName = input("What is your name? ")
+studentID = input("What is your studentID? ")
+
+# Set the predetermined number to guess
+correctNumber = 5
+numberOfTries = 0
+
+# Guessing game loop
+guessedCorrectly = False
+
+while not guessedCorrectly:
+    userGuess = int(input("Please guess a number between 1 and 10..."))
+    numberOfTries += 1
+    
+    if userGuess < correctNumber:
+        print("You guessed too low")
+    elif userGuess > correctNumber:
+        print("You guessed too high")
+    else:
+        print(f"Congratulations, {userName}! You guessed the number in {numberOfTries} tries!")
+        guessedCorrectly = True
+
+# While loop demonstration
+print("\nOutput from the 'while' loop:")
+loopCounter = 0
+while loopCounter < 5:
+    incrementedValue = correctNumber + (loopCounter + 1)
+    print(f"{correctNumber} incremented by {loopCounter + 1} is {incrementedValue}")
+    loopCounter += 1
+
+# For loop demonstration
+print("\nOutput from the 'for' loop:")
+for loopCounter in range(5):
+    incrementedValue = correctNumber + (loopCounter + 1)
+    print(f"{correctNumber} incremented by {loopCounter + 1} is {incrementedValue}")
